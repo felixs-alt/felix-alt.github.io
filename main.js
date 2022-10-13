@@ -2,7 +2,7 @@ window.onload = function(){
     let x = getCookie("mac");
     if (x != "") {
         if (x = "04:56:E5:3E:D2:80") {
-            alert("Get Trolled");
+            alert(x);
             window.location = "./trolled.html";
 }
 }
