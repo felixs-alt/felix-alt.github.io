@@ -27,9 +27,8 @@ function SaveMac()  {
     window.location.reload();
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
-function getIp() {
+async function getIp() {
     fetch('https://api.myip.com/'{ mode: 'no-cors'})
-  async function getIp() {
     let url = 'users.json';
     try {
         let res = await fetch(url);
