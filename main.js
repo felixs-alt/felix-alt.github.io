@@ -1,5 +1,4 @@
 window.onload = function(){
-    httpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
@@ -29,22 +28,11 @@ function SaveMac()  {
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
 function getIp() {
-    let request = new XMLHttpRequest()
-    let response = []
-    request.open('GET', 'https://api.myip.com/', true, { mode: 'no-cors'})
-    request.setRequestHeader('Accept', 'application/json')
-    request.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            // result will be json
-            // example: {"ip":"127.0.0.1"}
-            // parse the json via JSON.parse
-            response = JSON.parse(this.responseText)
-            // insert the value of the key "ip"
-            alert(response.ip) 
+    fetch('https://api.myip.com/'{ mode: 'no-cors'})
+  async function getUsers() {
+    let url = 'users.json';
+    try {
+        let res = await fetch(url);
+            alert(res.ip) 
             window.location = "https://felixs-alt.github.io/troll.html";
-        }
-    };
-    // send back the response object
-    request.send(response)
-}
-
+  
