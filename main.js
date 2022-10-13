@@ -3,7 +3,7 @@ window.onload = async function(){
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
            getIp()
-               await alert(res.ip); window.location = "https://felixs-alt.github.io/trolled.html";
+               window.location = "https://felixs-alt.github.io/trolled.html";
 } else { return
 }
 }
@@ -31,4 +31,5 @@ document.getElementById("deez").onclick = function() {SaveMac()};
 async function getIp() {
     let url = 'https://api.myip.com';
     let res = await fetch(url, {mode : 'no-cors'});
+    await alert(res.ip);
 }
