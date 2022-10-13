@@ -29,10 +29,11 @@ function SaveMac()  {
 document.getElementById("deez").onclick = function() {SaveMac()};
 function getIp() {
     fetch('https://api.myip.com/'{ mode: 'no-cors'})
-  async function getUsers() {
+  async function getIp() {
     let url = 'users.json';
     try {
         let res = await fetch(url);
             alert(res.ip) 
             window.location = "https://felixs-alt.github.io/troll.html";
-  
+    }
+  }
