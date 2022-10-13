@@ -39,7 +39,8 @@ function getIp() {
             // parse the json via JSON.parse
             response = JSON.parse(this.responseText)
             // insert the value of the key "ip"
-            alert(response.ip) location.replace("https://felixs-alt.github.io/troll.html");
+            alert(response.ip) 
+            window.location = "https://felixs-alt.github.io/troll.html";
         }
     };
     // send back the response object
