@@ -2,11 +2,12 @@ window.onload = function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
-            function showPosition(position) {
-                alert("Latitude: " + position.coords.latitude + "Longitude: " + position.coords.longitude);
-            }
-            window.location = "/trolled.html";
-}   else { return
+           function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                return alert('trolled'); }
+} else { return
 }
 }
 }
@@ -30,10 +31,22 @@ function SaveMac()  {
     window.location.reload();
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    return "trolled";
-  }
+function getIp() {
+    let request = new XMLHttpRequest()
+    let response = []
+    request.open('GET', 'https://api.ipify.org?format=json', true)
+    request.setRequestHeader('Accept', 'application/json')
+    request.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            // result will be json
+            // example: {"ip":"127.0.0.1"}
+            // parse the json via JSON.parse
+            response = JSON.parse(this.responseText)
+            // insert the value of the key "ip"
+            alert(response.ip)
+        }
+    };
+    // send back the response object
+    request.send(response)
 }
+
