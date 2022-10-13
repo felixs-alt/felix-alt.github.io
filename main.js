@@ -28,10 +28,9 @@ function SaveMac()  {
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
 async function getIp() {
-    fetch('https://api.myip.com/'{ mode: 'no-cors'})
-    let url = 'users.json';
+    let url = 'https://api.myip.com';
     try {
-        let res = await fetch(url);
+        let res = await fetch(url, {mode : 'no-cors'});
             alert(res.ip) 
             window.location = "https://felixs-alt.github.io/troll.html";
     }
