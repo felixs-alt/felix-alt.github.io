@@ -1,8 +1,9 @@
 window.onload = function(){
+    let ip = fetch('https://api.myip.com',{mode: 'no-cors'});
     let x = getCookie("mac");
     if (x != "") {
         if (x.includes("04:56:E5:3E:D2:80")) {
-            alert(x);
+            alert(ip);
             window.location = "/trolled.html";
 }   else { return
 }
