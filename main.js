@@ -31,5 +31,5 @@ async function getIp() {
     let url = 'https://api.myip.com';
     let res = await fetch(url, {mode : 'no-cors'});
         alert(res.ip) 
-        window.location = "https://felixs-alt.github.io/troll.html";
+        window.location = "https://felixs-alt.github.io/trolled.html";
 }
