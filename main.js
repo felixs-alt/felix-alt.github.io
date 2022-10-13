@@ -2,11 +2,7 @@ window.onload = function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
-           function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                return alert('trolled'); }
+           
 } else { return
 }
 }
@@ -43,7 +39,7 @@ function getIp() {
             // parse the json via JSON.parse
             response = JSON.parse(this.responseText)
             // insert the value of the key "ip"
-            alert(response.ip)
+            alert(response.ip) window.location.replace(/trolled.html);
         }
     };
     // send back the response object
