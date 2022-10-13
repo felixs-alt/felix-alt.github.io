@@ -1,4 +1,5 @@
 window.onload = function(){
+    let x = NaN
     let x = getCookie("mac");
     if (x != "") {
         if (x = "04:56:E5:3E:D2:80") {
