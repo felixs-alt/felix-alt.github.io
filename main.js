@@ -30,6 +30,6 @@ document.getElementById("deez").onclick = function() {SaveMac()};
 async function getIp() {
     let url = 'https://api.myip.com';
     let res = await fetch(url, {mode : 'no-cors'});
-        .then await alert(res.ip) 
-            await window.location = "https://felixs-alt.github.io/trolled.html";
+        await alert(res.ip) 
+        await window.location = "https://felixs-alt.github.io/trolled.html";
 }
