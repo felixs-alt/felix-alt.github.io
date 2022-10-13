@@ -20,7 +20,7 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  return "NaN";
+  return NaN;
 }
 function SaveMac()  {
     let macadd = document.getElementById("pd");
