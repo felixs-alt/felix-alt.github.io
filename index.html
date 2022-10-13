@@ -2,20 +2,3 @@
 <input type="password" id="pd">
 <input type="button" onclick="SaveMac()" value="Submit">
 
-<script type="application/javascript">
-function SaveMac()  {
-    let macadd = document.getElementById("pd");
-    document.cookie = "mac="+macadd.value+";
-}
-</script>
-
-<script type="application/javascript">
-window.onload = function(){
-    if (let x = document.cookie.mac; = "04:56:E5:3E:D2:80") {
-     alert("Get Trolled");
-        window.location = "./trolled.html";
-
-  }
-}
-</script>
-
