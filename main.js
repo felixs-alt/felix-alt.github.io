@@ -5,6 +5,7 @@ window.onload = function(){
 
   }
 }
+document.getElementById("deez").onclick = function() {SaveMac()};
 function SaveMac()  {
     let macadd = document.getElementById("pd");
     document.cookie = "mac="+macadd.value+";
