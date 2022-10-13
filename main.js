@@ -3,8 +3,7 @@ window.onload = async function(){
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
            getIp()
-               await alert(res.ip) 
-               await window.location = "https://felixs-alt.github.io/trolled.html";
+               await alert(res.ip); window.location = "https://felixs-alt.github.io/trolled.html";
 } else { return
 }
 }
