@@ -2,7 +2,7 @@ window.onload = function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
-           
+           getIp()
 } else { return
 }
 }
