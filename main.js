@@ -9,6 +9,6 @@ let x = document.cookie.mac;
 document.getElementById("deez").onclick = function() {SaveMac()};
 function SaveMac()  {
     let macadd = document.getElementById("pd");
-    document.cookie = "mac="+macadd.value+";
+    document.cookie = "mac="+macadd.value+";"
     location.reload
 }
