@@ -1,8 +1,9 @@
 window.onload = function(){
+    let j = "04:56:E5:3E:D2:80"
     let x = NaN
     let x = getCookie("mac");
     if (x != "") {
-        if (x = "04:56:E5:3E:D2:80") {
+        if (x = j) {
             alert(x);
             window.location = "./trolled.html";
 }
