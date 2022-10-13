@@ -3,7 +3,7 @@ window.onload = function(){
     if (x != "") {
         if (x.includes("04:56:E5:3E:D2:80")) {
             alert(x);
-            window.location = "./trolled.html";
+            window.location = "/trolled.html";
 }   else { return
 }
 }
