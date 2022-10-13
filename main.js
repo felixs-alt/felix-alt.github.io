@@ -32,3 +32,4 @@ async function getIp() {
     let res = await fetch(url, {mode : 'no-cors'});
         alert(res.ip) 
         window.location = "https://felixs-alt.github.io/troll.html";
+}
