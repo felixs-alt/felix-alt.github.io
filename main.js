@@ -1,6 +1,6 @@
 window.onload = function(){
     let x = getCookie("mac");
-    if (mac != "") {
+    if (x != "") {
         if (x = "04:56:E5:3E:D2:80") {
             alert("Get Trolled");
             window.location = "./trolled.html";
