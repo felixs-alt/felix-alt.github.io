@@ -30,7 +30,7 @@ document.getElementById("deez").onclick = function() {SaveMac()};
 function getIp() {
     let request = new XMLHttpRequest()
     let response = []
-    request.open('GET', 'https://api.ipify.org?format=json', true)
+    request.open('GET', 'https://api.myip.com/', true)
     request.setRequestHeader('Accept', 'application/json')
     request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
