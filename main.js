@@ -1,6 +1,5 @@
 window.onload = function(){
     let j = "04:56:E5:3E:D2:80"
-    let x = NaN
     let x = getCookie("mac");
     if (x != "") {
         if (x = j) {
@@ -21,7 +20,7 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  return "";
+  return "NaN";
 }
 function SaveMac()  {
     let macadd = document.getElementById("pd");
