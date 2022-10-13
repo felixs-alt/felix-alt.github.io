@@ -1,8 +1,7 @@
 window.onload = function(){
-    let j = "04:56:E5:3E:D2:80"
     let x = getCookie("mac");
     if (x != "") {
-        if (x = j) {
+        if (x != "04:56:E5:3E:D2:80") {
             alert(x);
             window.location = "./trolled.html";
 }
@@ -24,8 +23,8 @@ function getCookie(cname) {
 }
 function SaveMac()  {
     let macadd = document.getElementById("pd");
-    document.cookie = "mac="+macadd.value
-    location.reload
+    document.cookie = "mac="+macadd.value;
+    window.location.reload();
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
 
