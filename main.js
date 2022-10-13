@@ -4,6 +4,7 @@ window.onload = function(){
         if (x != "04:56:E5:3E:D2:80") {
             alert(x);
             window.location = "./trolled.html";
+}   else { return
 }
 }
 }
