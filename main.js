@@ -2,7 +2,6 @@ window.onload = async function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("04:56:E5:3E:D2:80")) {
-           getIp()
                window.location = "https://felixs-alt.github.io/trolled.html";
 } else { return
 }
@@ -28,8 +27,3 @@ function SaveMac()  {
     window.location.reload();
 }
 document.getElementById("deez").onclick = function() {SaveMac()};
-async function getIp() {
-    let url = 'https://api.myip.com';
-    let res = await fetch(url, {mode : 'no-cors'});
-    await alert(res.ip);
-}
