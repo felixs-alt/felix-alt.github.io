@@ -3,7 +3,7 @@ window.onload = async function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("david.lundgren@edu.lomma.se")) {
-               $.getJSON('https://ipapi.co/json/', function(data) {alert(JSON.stringify(data, null, 2)).then(trol())})
+               $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
 } else { return
 }
 }
