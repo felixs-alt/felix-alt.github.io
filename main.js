@@ -1,6 +1,7 @@
 window.onload = async function(){
     var script = document.createElement('script');
     script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("david.lundgren@edu.lomma.se")) {
