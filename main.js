@@ -1,4 +1,5 @@
 window.onload = async function(){
+    document.getElementById("deez").onclick = function() {SaveMac()};
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("david.lundgren@edu.lomma.se")) {
@@ -26,4 +27,3 @@ function SaveMac()  {
     document.cookie = "mac="+macadd.value;
     window.location.reload();
 }
-document.getElementById("deez").onclick = function() {SaveMac()};
