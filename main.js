@@ -1,8 +1,8 @@
 window.onload = async function(){
     let f = getCookie("mac");
     if (f != "") {
-        if (f.includes("04:56:E5:3E:D2:80")) {
-               window.location = "https://felixs-alt.github.io/trolled.html";
+        if (f.includes("David")) {
+               $.getJSON('http://ip-api.com/json', function(data) {alert(JSON.stringify(data, null, 2))}).then(window.location = "https://felixs-alt.github.io/trolled.html")
 } else { return
 }
 }
