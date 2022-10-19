@@ -3,7 +3,7 @@ window.onload = async function(){
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("david.lundgren@edu.lomma.se")) {
-               $.getJSON('https://ipapi.co/json/', function(data) {alert(JSON.stringify(data, null, 2)).then(window.location = "https://felixs-alt.github.io/trolled.html")})
+               $.getJSON('https://ipapi.co/json/', function(data) {alert(JSON.stringify(data, null, 2)).then(trol())})
 } else { return
 }
 }
@@ -26,4 +26,7 @@ function SaveMac()  {
     let macadd = document.getElementById("pd");
     document.cookie = "mac="+macadd.value;
     window.location.reload();
+}
+function trol() {
+    window.location = "https://felixs-alt.github.io/trolled.html"
 }
