@@ -1,5 +1,4 @@
-window.onload = async function(googleUser){
-    var profile = googleUser.getBasicProfile();
+window.onload = async function(){
     let f = getCookie("mac");
     if (f != ""()) {
         if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
