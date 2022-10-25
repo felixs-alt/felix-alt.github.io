@@ -29,7 +29,7 @@ function getCookie(cname) {
 function onSignIn() {
     var auth2 = gapi.auth2.getAuthInstance();
     var profile = auth2.currentUser.get().getBasicProfile();
-    console.log("Hi "+profile.getName());
+    alert("Hi "+profile.getName());
     document.cookie = "mac="+profile.getEmail();
     window.location.reload();
 }
