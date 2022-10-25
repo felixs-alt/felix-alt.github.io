@@ -1,9 +1,9 @@
 window.onload = async function(){
     let f = getCookie("mac");
-    if (f != profile.getId) {
-        if (f.includes("david.lundgren@edu.lomma.se")) {
+    if (f != profile.getEmail()) {
+        if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
                $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
-} else { return
+} else { window.loaction = /
 }
 }
 }
@@ -23,7 +23,7 @@ function getCookie(cname) {
 }
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-    document.cookie = "mac="+profile.getId;
+    document.cookie = "mac="+profile.getEmail();
     window.location.reload();
 }
 function trol() {
