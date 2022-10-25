@@ -1,7 +1,6 @@
 window.onload = async function(){
-    document.getElementById("deez").onclick = function() {SaveMac()};
     let f = getCookie("mac");
-    if (f != "") {
+    if (f != profile.getId) {
         if (f.includes("david.lundgren@edu.lomma.se")) {
                $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
 } else { return
@@ -22,9 +21,9 @@ function getCookie(cname) {
   }
   return "";
 }
-function SaveMac()  {
-    let macadd = document.getElementById("pd");
-    document.cookie = "mac="+macadd.value;
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+    document.cookie = "mac="+profile.getId;
     window.location.reload();
 }
 function trol() {
