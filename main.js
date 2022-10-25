@@ -26,10 +26,9 @@ function getCookie(cname) {
   }
   return "";
 }
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('signed in')
-  document.cookie = "mac="+profile.getEmail();
+function onSignIn() {
+  console.log(id)
+  document.cookie = "mac="+id;
   window.location.reload();
 }
 function trol() {
