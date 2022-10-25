@@ -1,4 +1,9 @@
 window.onload = async function(){
+    google.accounts.id.initialize({
+      client_id: '459313808683-iih3v35lut4d3qlortmikj8mt2go8bnv.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
     let f = getCookie("mac");
     if (f != "") {
         if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
