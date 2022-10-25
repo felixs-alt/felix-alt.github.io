@@ -3,7 +3,7 @@ window.onload = async function(){
     if (f != profile.getEmail()) {
         if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
                $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
-} else { window.loaction = /
+} else { window.loaction = "/"
 }
 }
 }
