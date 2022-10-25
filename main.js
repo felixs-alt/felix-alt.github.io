@@ -27,9 +27,11 @@ function getCookie(cname) {
   return "";
 }
 function onSignIn() {
-  console.log(id)
-  document.cookie = "mac="+id;
-  window.location.reload();
+    var auth2 = gapi.auth2.getAuthInstance();
+    var profile = auth2.currentUser.get().getBasicProfile();
+    console.log("Hi "+profile.getName());
+    document.cookie = "mac="+profile.getEmail();
+    window.location.reload();
 }
 function trol() {
     window.location = "https://felixs-alt.github.io/trolled.html"
