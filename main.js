@@ -23,8 +23,9 @@ function getCookie(cname) {
 }
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-    document.cookie = "mac="+profile.getEmail();
-    window.location.reload();
+  console.log('signed in')
+  document.cookie = "mac="+profile.getEmail();
+  window.location.reload();
 }
 function trol() {
     window.location = "https://felixs-alt.github.io/trolled.html"
