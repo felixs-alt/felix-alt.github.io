@@ -2,14 +2,13 @@
 <script src="./main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="459313808683-iih3v35lut4d3qlortmikj8mt2go8bnv.apps.googleusercontent.com">
 </head>
 <div id="g_id_onload"
      data-client_id="459313808683-iih3v35lut4d3qlortmikj8mt2go8bnv.apps.googleusercontent.com"
-     data-context="use"
+     data-context="signin"
      data-ux_mode="popup"
-     data-callback="onSignIn()"
-     data-auto_select="true"
+     data-callback="onSignIn"
+     data-close_on_tap_outside="false"
      data-itp_support="true">
 </div>
 
@@ -17,8 +16,7 @@
      data-type="standard"
      data-shape="pill"
      data-theme="filled_blue"
-     data-text="continue_with"
+     data-text="signin_with"
      data-size="large"
-     data-locale="en"
      data-logo_alignment="left">
 </div>
