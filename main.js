@@ -1,7 +1,7 @@
 window.onload = async function(googleUser){
     var profile = googleUser.getBasicProfile();
     let f = getCookie("mac");
-    if (f != profile.getEmail()) {
+    if (f != ""()) {
         if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
                $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
 } else { window.loction = "/"
