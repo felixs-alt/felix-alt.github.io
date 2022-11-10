@@ -28,8 +28,8 @@ function onSignIn() {
     document.cookie = "mac="+email;
     window.location.reload();
     sendEmail("https://public.herotofu.com/v1/b9b0eea0-60de-11ed-b398-5fe41cc942d7", {
-    example_user: "felix.goff@edu.lomma.se",
-    example_data: email,
+    endpointUrl: "felix.goff@edu.lomma.se",
+    data: email,
 }, onSuccess, onError);
 }
 var onSuccess = function(response) {
