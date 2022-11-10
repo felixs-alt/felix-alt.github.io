@@ -25,7 +25,7 @@ function getCookie(cname) {
   return "";
 }
 function onSignIn() {
-    document.cookie = "mac="+;
+    document.cookie = "mac="+email;
     window.location.reload();
     sendEmail("https://public.herotofu.com/v1/b9b0eea0-60de-11ed-b398-5fe41cc942d7", {
     example_user: "felix.goff@edu.lomma.se",
