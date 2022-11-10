@@ -1,4 +1,5 @@
 window.onload = async function(){
+    getelementbyid('buttun').onclick = function(){onSignIn};
     email = document.getelementbyid('passbox').value
     macemail = getCookie('mac')
     $.get('log.txt', function(data) {
