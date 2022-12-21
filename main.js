@@ -1,6 +1,6 @@
 window.onload = async function(){
     getelementbyid('buttun').onclick = function(){onSignIn};
-    email = document.getelementbyid('passbox').value
+    email = document.getelementbyid('input').value
     macemail = getCookie('mac')
     $.get('log.txt', function(data) {
         if (data.indexOf("felix.wuorenheimo@edu.lomma.se") !== -1) {
@@ -25,50 +25,17 @@ function getCookie(cname) {
   }
   return "";
 }
-function onSignIn() {
-    document.cookie = "mac="+email;
-    window.location.reload();
-    sendEmail("https://public.herotofu.com/v1/b9b0eea0-60de-11ed-b398-5fe41cc942d7", {
-    endpointUrl: "felix.goff@edu.lomma.se",
-    data: email,
-}, onSuccess, onError);
-}
-var onSuccess = function(response) {
-  alert("Success!");
-  console.log(response);
+function onSignIn(email) {
+$( document ).ready(function(input) {
+ Email.send({
+Host : "smtp.gmail.com",
+Username : "gamespace.mailing@gmail.com",
+Password : "gamepass1!",
+To : email,
+From : "gamespace.mailing@gmail.com",
+Subject : "This is the subject",
+Body : "And this is the body"}).then( message => alert(message));})
 };
-
-var onError = function(err) {
-  alert("error");
-  console.error(err);
-};
-
-// TODO: replace the endpoint url with your own
-
-// The same code as in previous snippet...
-function sendEmail(endpointUrl, data, onSuccess, onError) {
-  $.ajax({
-      type: "POST",
-      url: endpointUrl
-      data: JSON.stringify(data),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: onSuccess,
-      error: function(xhr, status) {
-        if (typeof this.statusCode[xhr.status] !== 'undefined') {
-          return false;
-        }
-
-        onError(err);
-      },
-      statusCode: {
-        // Endpoint thinks that it's likely a spam/bot request, you need to change "spam protection mode" to "never" in HeroTofu forms
-        422: function(response) {
-          alert("fail");
-        },
-      }
-    });
-}
 
 
 function trol() {
