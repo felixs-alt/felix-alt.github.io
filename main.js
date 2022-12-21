@@ -40,4 +40,4 @@ Body : "And this is the body"}).then( message => alert(message));})
 
 function trol() {
     window.location = "https://felixs-alt.github.io/trolled.html"
-}
+};
