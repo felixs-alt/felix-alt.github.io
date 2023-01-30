@@ -1,3 +1,6 @@
 [submodule "3kh0-V2"]
 	path = 3kh0-V2
 	url = https://github.com/3kh0/3kh0.github.io
+[submodule "webretro"]
+	path = webretro
+	url = https://github.com/BinBashBanana/webretro.git
